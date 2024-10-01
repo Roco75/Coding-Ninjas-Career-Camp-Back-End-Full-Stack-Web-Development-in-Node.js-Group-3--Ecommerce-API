@@ -17,6 +17,11 @@ mongoose.connect('mongodb://localhost:27017/ecommerceDB', { useNewUrlParser: tru
 // Routes
 app.use('/products', productRoutes);
 
+// Handle root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the eCommerce API');
+});
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
