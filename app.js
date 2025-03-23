@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const productRoutes = require('./routes/product');
 
+require('dotenv').config();
+
+
 const app = express();
 
 // Middleware
@@ -27,3 +30,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
